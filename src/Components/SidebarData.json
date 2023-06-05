@@ -1,0 +1,103 @@
+[
+    {
+        "title": "Menu",
+        "path": "/"
+    
+    },
+    {
+        "title": "Blog",
+        "subNav": [
+            {
+                "title": "Add",
+                "path": "/blog/add"
+            },
+            {
+                "title": "Update",
+                "path": "/blog/update"
+            }
+        ]
+    },
+    {
+        "title": "Site Pages",
+        "subNav": [
+            {
+                "title": "Add",
+                "path": "/sitePages/add"
+            },
+            {
+                "title": "Update",
+                "path": "/sitePages/update"
+            },
+            {
+                "title": "Meta Keywords",
+                "path": "/sitePages/metaKeywords"
+            }
+        ]
+    },
+    {
+        "title": "Help Section",
+        "subNav": [
+            {
+                "title": "Add",
+                "path": "/helpSection/add"
+            },
+            {
+                "title": "Update",
+                "path": "/helpSection/update"
+            }
+        ]
+    },
+    {
+        "title": "User Management",
+        "subNav": [
+            {
+                "title": "Add",
+                "path": "/userManagement/add"
+            },
+            {
+                "title": "Update",
+                "path": "/userManagement/update"
+            }
+        ]
+    },
+    {
+        "title": "Employee",
+        "subNav": [
+            {
+                "title": "Add",
+                "path": "/employee/add"
+            },
+            {
+                "title": "Update",
+                "path": "/employee/update"
+            }
+        ]
+    },
+    {
+        "title": "Access Management",
+        "path": "/accessManagement"
+    },
+    {
+        "title": "Reports and Analytics",
+        "path": "/reportsAndAnalytics"
+    },
+    {
+        "title": "Master Settings",
+        "subNav": [
+            {
+                "title": "City",
+                "path": "/masterSettings/City"
+            }
+        ]
+    },
+    {
+        "title": "System",
+        "subNav": [
+            {
+                "title": "State",
+                "path": "/system/state"
+            }
+        ]
+    }
+
+]
