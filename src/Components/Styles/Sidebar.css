@@ -38,13 +38,13 @@
    color: #636984;
   }
 .sidebar-title.plain:hover{
-  background-color: #fff;
+  /* background-color: #fff; */
     color: #3ba0aa;
     transition: all .3s ease-in-out;
 }
 
 .sidebar-item:hover{
-  background-color: #fff;
+  /* background-color: #fff; */
     color: #3ba0aa;
     transition: all .3s ease-in-out;
 }
@@ -66,12 +66,12 @@
   overflow: hidden;
 }
 .sidebar-item.open{
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #3ba0aa;
 }
 .sidebar-item.open .sidebar-content{
   height: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #3ba0aa;
 }
 ::-webkit-scrollbar{
