@@ -5,10 +5,9 @@ import SubMenu from './SubMenu';
 
 const Sidebar = () => {
   return (
-    <div>
-      {items.map((item,index) => <SubMenu key={index} {...item}/>) }
-      
-    </div>
+    <>
+     {items.map((item,index) => <SubMenu key={index} {...item}/>) }
+    </>
   )
 }
 

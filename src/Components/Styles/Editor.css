@@ -1,9 +1,13 @@
 .headerEditor{
-    backdrop-filter: blur(6px);
-    background-color: #faf9fc;
-    padding: 20px 15px;
-    position: relative;
-    z-index: 9;
-    font-family: Poppins;
-    box-shadow: 0px 2px 4px rgba(129, 128, 128, 0.4);
+    /* backdrop-filter: blur(6px); */
+    background: #1e2224;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+}
+.headerEditor h2{
+    font-family: "Work Sans";
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 30px;
 }

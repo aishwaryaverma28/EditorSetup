@@ -1,29 +1,26 @@
 import React from 'react';
 import "../Components/Styles/Sidebar.css";
-import userLogo from '../Components/Assets/employee.jpg'
-import logoutIcon from '../Components/Assets/userIcon.svg';
+import companyLogo from '../Assets/image/logo.png'
+import userIcon from '../Assets/image/user-img.png'
 import Sidebar from './Sidebar';
 
 const NavigationBar = () => {
   return (
-    <div>
-      <img src="https://www.leadplaner.com/assetmain/images/leadplaner_logo.png" class="companyLogo"/>
-      <hr/>
+    <>
+      <div class="sidebar-header">
+          <a><img src={companyLogo} alt="Logo Image" /></a>
+        </div>
       <div class= "navigationBar">
         <div class="userLogoContainer">
-          <div class="userLogo">
-            <img src={userLogo} class="userLogoImg"/>
-            <div class="userDesp">
-              <h5>Raman</h5>
-              <p>Client</p>
-            </div>            
-          </div>
-          <img src={logoutIcon}/>
+          <img src={userIcon} alt="user-img"/>
+          <p>John Wick<br/> <span>Client</span></p>
         </div>
-        <Sidebar/>
+        <div className='sidebarContainer'>
+         <Sidebar/>
+         </div>
       </div>
       
-    </div>
+    </>
   )
 }
 

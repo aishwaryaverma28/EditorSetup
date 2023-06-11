@@ -1,0 +1,53 @@
+.addBlogContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addBlogMainForm{
+    width: 70%;
+    border: 2px solid aqua;
+    height: 100vh;
+    padding: 1rem;
+}
+.addBlogRightForm{
+    width: 30%;
+    border: 2px solid blue;
+    height: 100vh;
+}
+.fromFiled{
+    padding-bottom: 30px;
+}
+.fromFiled input{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  padding: 1.5rem;
+}
+.imageUploaderData{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imageUploaderData button{
+    background-color: #2b74da;
+    color: #fff;
+    cursor: pointer;
+    padding: 1.5rem 2.5rem;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.imageUploaderData p{
+    color: #2b74da;
+    font-weight: 500;
+}
+.imageUploaderContainer{
+    padding-bottom: 30px;
+}
