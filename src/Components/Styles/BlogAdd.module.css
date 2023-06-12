@@ -1,20 +1,16 @@
 .addBlogContainer{
-    height: 100vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-.addBlogMainForm{
-    width: 70%;
-    border: 2px solid aqua;
-    height: 100vh;
     padding: 1rem;
 }
+.addBlogMainForm{
+    width: 60%;
+}
 .addBlogRightForm{
-    width: 30%;
-    border: 2px solid blue;
-    height: 100vh;
+    width: 35%;
 }
 .fromFiled{
     padding-bottom: 30px;
@@ -30,7 +26,7 @@
 }
 .imageUploaderData{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .imageUploaderData button{
@@ -41,6 +37,7 @@
     font-size: 20px;
     border-radius: 10px;
     border: none;
+    width: 20rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,4 +47,121 @@
 }
 .imageUploaderContainer{
     padding-bottom: 30px;
+}
+.fromBlogSection input{
+    width: 100%;
+  border: 1px solid #dcdcdc;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.addSectionBtn{
+    color: #2b74da;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 1.5rem 2.5rem;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);   
+}
+
+
+
+
+.tags {
+    background: #f8fafb;
+    margin: 60px 30px 0 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.02);
+    -moz-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tags h3 {
+    font-size: 24px;
+    font-family: "Work Sans", sans-serif;
+    text-transform: capitalize;
+    color: #1e2224;
+    padding: 20px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  
+  .contentBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  
+  .tagSelectBox {
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    text-transform: capitalize;
+    color: #818181;
+  }
+  
+  .contentBox select {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+  
+  .contentBox select option {
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+  }
+  
+  .contentBox .fromFiled {
+    width: 100%;
+  }
+  
+  .primaryBtn {
+    padding: 25px 30px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    border-radius: 10px;
+    border: 1px solid #2b74da;
+    background: transparent;
+    color: #2b74da;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .primaryBtn:hover {
+    color: #ffffff;
+    background: #2b74da;
+    transition: all 800ms ease-in-out;
+  }
+  
+  .secondaryBtn {
+    cursor: pointer;
+    padding: 25px 30px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    border-radius: 10px;
+    border: 1px solid #077838;
+    background: #077838;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .secondaryBtn:hover {
+    color: #077838;
+    background: #ffffff;
+    border: 1px solid #077838;
+    transition: all 800ms ease-in-out;
+  }
+  .formEditor{
+    /* border: 2px solid red; */
+    padding: 2rem;
+    height: 30rem;
+  }
+  .quillEditor{
+    height: 20rem;
 }

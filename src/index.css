@@ -95,18 +95,12 @@ ol {
 }
 .sidebar{
   width: 25%;
-  height: 100vh;
   background: #ffffff;
   color: #1e2224;
   transition: all 0.3s;
   border-right: 1px solid #dcdcdc;
   font-family: 'Work Sans';
 }
-hr {
-  border-color: rgb(249, 248, 248); 
-  box-shadow: 0px 2px 4px rgba(129, 128, 128, 0.4);
-}
 .conatiner{
   width: 80%;
-  
 }
