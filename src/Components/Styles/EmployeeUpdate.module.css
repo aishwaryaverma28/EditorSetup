@@ -1,0 +1,71 @@
+.addEmployeeFrom{
+    border: 1px solid #dcdcdc;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.formDiv{
+    display: flex;
+    gap: 1.5rem;
+}
+.fromFiled label {
+    color: #1e2224;
+    font-size: 22px;
+    font-family: "Work Sans", sans-serif;
+    text-transform: capitalize;
+    min-width: 230px;
+    font-weight: 500;
+  }
+  
+  .fromFiled label span {
+    color: #f66a6a;
+  }
+  
+  .fromFiled input {
+    min-width: 440px;
+    border: 1px solid #dcdcdc;
+    height: 66px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    color: #1e2224;
+    font-weight: 600;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+  }
+  
+  .fromFiled textarea {
+    min-width: 440px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding: 12px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    color: #1e2224;
+    font-weight: 600;
+  }
+
+  .secondaryBtn {
+    padding: 25px 30px;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    border-radius: 10px;
+    border: 1px solid #077838;
+    background: #077838;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .secondaryBtn:hover {
+    color: #077838;
+    background: #ffffff;
+    border: 1px solid #077838;
+    transition: all 800ms ease-in-out;
+  }
+  .saveBtnRight{
+    display: flex;
+    justify-content: end;
+  }
