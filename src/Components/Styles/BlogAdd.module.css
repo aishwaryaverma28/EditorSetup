@@ -18,11 +18,11 @@
 .fromFiled input{
   width: 100%;
   border: 1px solid #dcdcdc;
-  height: 72px;
+  height: 60px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Work Sans", sans-serif;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 .imageUploaderData{
     display: flex;
@@ -33,13 +33,14 @@
     background-color: #2b74da;
     color: #fff;
     cursor: pointer;
-    padding: 1.5rem 2.5rem;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 17px;
     border-radius: 10px;
     border: none;
     width: 20rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-}
+    transition: 0.2s linear all;
+  }
 
 .imageUploaderData p{
     color: #2b74da;
@@ -49,21 +50,21 @@
     padding-bottom: 30px;
 }
 .fromBlogSection input{
-    width: 100%;
+  width: 100%;
   border: 1px solid #dcdcdc;
-  height: 72px;
+  height: 60px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Work Sans", sans-serif;
-  padding: 1.5rem;
+  padding: 1.2rem;
   margin-bottom: 1.5rem;
 }
 .addSectionBtn{
     color: #2b74da;
     background-color: #fff;
     cursor: pointer;
-    padding: 1.5rem 2.5rem;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 17px;
     border-radius: 10px;
     border: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);   
@@ -82,38 +83,38 @@
   }
   
   .tags h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Work Sans", sans-serif;
-    text-transform: capitalize;
     color: #1e2224;
-    padding: 20px;
+    padding: 17px;
     border-bottom: 1px solid #dcdcdc;
   }
   
   .contentBox {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 20px;
   }
   
   .tagSelectBox {
-    font-size: 20px;
+    font-size: 17px;
     font-family: "Work Sans", sans-serif;
-    text-transform: capitalize;
     color: #818181;
   }
   
   .contentBox select {
     width: 100%;
-    height: 70px;
+    height: 60px;
     padding: 10px;
     margin-bottom: 30px;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
+    font-size: 18px;
+    font-family: "Work Sans";
   }
   
   .contentBox select option {
-    font-size: 20px;
+    font-size: 17px;
     font-family: "Work Sans", sans-serif;
   }
   
@@ -122,8 +123,8 @@
   }
   
   .primaryBtn {
-    padding: 25px 30px;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 17px;
     font-family: "Work Sans", sans-serif;
     border-radius: 10px;
     border: 1px solid #2b74da;
@@ -141,8 +142,8 @@
   
   .secondaryBtn {
     cursor: pointer;
-    padding: 25px 30px;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 17px;
     font-family: "Work Sans", sans-serif;
     border-radius: 10px;
     border: 1px solid #077838;

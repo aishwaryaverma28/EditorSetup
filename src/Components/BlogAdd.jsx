@@ -57,7 +57,7 @@ const BlogAdd = () => {
           <div className={styles.addBlogRightForm}>
             <div className={styles.tags}>
               <div className={styles.tagContent}>
-                <h3>tags</h3>
+                <h3>Tags</h3>
                 <div className={styles.contentBox}>
                   <select name="" id="" className={styles.tagSelectBox}>
                     <option value="1">Please select tags</option>

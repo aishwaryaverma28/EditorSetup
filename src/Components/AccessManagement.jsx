@@ -3,7 +3,7 @@ import './Styles/Editor.css'
 
 const AccessManagement = () => {
   return (
-    <header className='headerEditor'>AccessManagement</header>
+    <header className='headerEditor'><h2>AccessManagement</h2></header>
   )
 }
 

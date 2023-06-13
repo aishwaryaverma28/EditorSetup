@@ -94,7 +94,7 @@ ol {
   justify-content: space-between;
 }
 .sidebar{
-  width: 25%;
+  width: 23%;
   background: #ffffff;
   color: #1e2224;
   transition: all 0.3s;
@@ -102,5 +102,5 @@ ol {
   font-family: 'Work Sans';
 }
 .conatiner{
-  width: 80%;
+  width: 77%;
 }

@@ -6,12 +6,13 @@
 }
 .formDiv{
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 .fromFiled label {
     color: #1e2224;
-    font-size: 22px;
-    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    font-family: "Work Sans";
     text-transform: capitalize;
     min-width: 230px;
     font-weight: 500;
@@ -23,16 +24,17 @@
   
   .fromFiled input {
     min-width: 440px;
-    border: 1px solid #dcdcdc;
-    height: 66px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: "Work Sans", sans-serif;
     color: #1e2224;
     font-weight: 600;
-    padding: 30px;
     margin-bottom: 30px;
     margin-left: 5px;
+    /* width: 100%; */
+    border: 1px solid #dcdcdc;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Work Sans";
+    padding: 1.2rem;
   }
   
   .fromFiled textarea {
@@ -49,9 +51,9 @@
   }
 
   .secondaryBtn {
-    padding: 25px 30px;
-    font-size: 20px;
-    font-family: "Work Sans", sans-serif;
+    padding: 13px 23px;
+    font-size: 18px;
+    font-family: "Work Sans";
     border-radius: 10px;
     border: 1px solid #077838;
     background: #077838;

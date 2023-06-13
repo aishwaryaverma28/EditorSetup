@@ -1,5 +1,5 @@
 .sidebar-header {
-  padding: 34px;
+  padding: 28px;
   background: #ffffff;
   border-bottom: 1px solid #dcdcdc;
   position: sticky;
@@ -12,21 +12,21 @@
 .userLogoContainer{
   display: flex;
   flex-wrap: nowrap;
-  padding: 34px;
+  padding: 28px;
   gap: 15px;
 }
 .userLogoContainer p{
-  line-height: 25px;
-  margin-top: 15px;
-  font-size: 22px;
+  line-height: 20px;
+  margin-top: 20px;
+  font-size: 18px;
   font-family: "Work Sans";
-  color: #1E2224;
+  color: #1e2224;
   font-weight: 600;
 }
 .userLogoContainer p span{
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Work Sans";
-  color: #86878A;
+  color: #86878a;
   font-weight: 600;
 
 }
@@ -36,10 +36,10 @@
     overflow-y: scroll;
 }
 .sidebar-item, .sidebar-title6{
-  color: #1e2224;
+    color: #1e2224;
     padding: 10px;
     padding-left: 30px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all .3s ease-in-out;
