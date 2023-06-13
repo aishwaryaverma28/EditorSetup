@@ -19,9 +19,9 @@
   border: 1px solid #ffffff;
 }
 
-html {
+ html {
   scroll-behavior: smooth;
-}
+} 
 body {
   font-weight: 400;
   margin: 0;
@@ -29,8 +29,8 @@ body {
   font-size: 14px;
   font-family: "Work Sans", sans-serif;
   background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
   overflow-x: hidden;
   color: #000;
   scrollbar-width: thin;
@@ -94,7 +94,7 @@ ol {
   justify-content: space-between;
 }
 .sidebar{
-  width: 23%;
+  width: 22%;
   background: #ffffff;
   color: #1e2224;
   transition: all 0.3s;
@@ -102,5 +102,5 @@ ol {
   font-family: 'Work Sans';
 }
 .conatiner{
-  width: 77%;
+  width: 78%;
 }

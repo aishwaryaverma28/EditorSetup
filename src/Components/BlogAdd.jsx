@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./Styles/BlogAdd.module.css";
 import "./Styles/Editor.css";
 import ImageUploader from "./ImageUploader";
-import ReactEditor from './ReactEditor'
-
+import ReactEditor from "./ReactEditor";
 
 const BlogAdd = () => {
   function AddSection(event) {
@@ -15,7 +14,7 @@ const BlogAdd = () => {
       <header className="headerEditor">
         <h2> Add a new Blog</h2>
       </header>
-      <form>
+      <form className={styles.scrollCover}>
         <div className={styles.addBlogContainer}>
           {/*==============================================================right side of form starts here ============================================================*/}
           <div className={styles.addBlogMainForm}>
@@ -27,8 +26,9 @@ const BlogAdd = () => {
                 placeholder="Blog Title"
               />
             </div>
-            <div className={styles.fromFiled}>
+            <div className={styles.fromUrl}>
               <input type="text" name="url" id="url" placeholder="Url" />
+              <ImageUploader buttonTitle="Add Image" />
             </div>
             <div className={styles.fromFiled}>
               <input
@@ -38,7 +38,7 @@ const BlogAdd = () => {
                 placeholder="Description"
               />
             </div>
-            <ImageUploader buttonTitle="Add Image" />
+
             <div className={styles.fromBlogSection}>
               <input
                 type="text"
@@ -46,10 +46,12 @@ const BlogAdd = () => {
                 id="sectiontitle"
                 placeholder="Section Title"
               />
-              <ImageUploader buttonTitle="Add Blog Section Image" />
-              <button onClick={AddSection} className={styles.addSectionBtn}>
-                Add Section
-              </button>
+              <div className={styles.formBtnBox}>
+                <ImageUploader buttonTitle="Add Blog Section Image" />
+                <button onClick={AddSection} className={styles.addSectionBtn}>
+                  Add Section
+                </button>
+              </div>
             </div>
           </div>
           {/*==============================================================right side of form end here ============================================================*/}
@@ -69,9 +71,9 @@ const BlogAdd = () => {
                   <button
                     onClick={AddSection}
                     type="button"
-                    className={`${styles.primaryBtn} ${styles.btnDefault}`}
+                    className={styles.primaryBtn}
                   >
-                    Add New Tag
+                    Add
                   </button>
                 </div>
               </div>
@@ -80,14 +82,12 @@ const BlogAdd = () => {
               <div className={styles.tagContent}>
                 <h3>Publish</h3>
                 <div className={styles.contentBox}>
-                  <div className={styles.fromFiled}>
-                    <input
-                      type="date"
-                      name="date"
-                      id="date"
-                      placeholder="please publish date"
-                    />
-                  </div>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    placeholder="please publish date"
+                  />
                   <button
                     type="button"
                     onClick={AddSection}
@@ -102,7 +102,7 @@ const BlogAdd = () => {
           {/*==============================================================left side of form ends here ============================================================*/}
         </div>
         <div className={styles.formEditor}>
-          <ReactEditor/>
+          <ReactEditor />
         </div>
       </form>
     </>

@@ -1,5 +1,5 @@
 .sidebar-header {
-  padding: 28px;
+  padding: 20px;
   background: #ffffff;
   border-bottom: 1px solid #dcdcdc;
   position: sticky;
@@ -12,35 +12,35 @@
 .userLogoContainer{
   display: flex;
   flex-wrap: nowrap;
-  padding: 28px;
+  align-items: center;
+  padding: 25px;
   gap: 15px;
 }
 .userLogoContainer p{
-  line-height: 20px;
-  margin-top: 20px;
+  line-height: 25px;
   font-size: 18px;
   font-family: "Work Sans";
-  color: #1e2224;
+  color: #1E2224;
   font-weight: 600;
 }
 .userLogoContainer p span{
-  font-size: 15px;
+  font-size: 12px;
   font-family: "Work Sans";
-  color: #86878a;
+  color: #86878A;
   font-weight: 600;
 
 }
 .sidebarContainer{
   /* border: 2px solid brown; */
-  height: 100vh;
+  max-height: 69vh;
     overflow-y: scroll;
 }
 .sidebar-item, .sidebar-title6{
-    color: #1e2224;
+  color: #1e2224;
     padding: 10px;
     padding-left: 30px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: all .3s ease-in-out;
     font-family: "Work Sans"
@@ -50,13 +50,13 @@
    width: 100%;
   }
 .sidebar-title.plain:hover{
-  color: #2b74da;
+  /* color: #2b74da; */
     background: #e3e9f2;
     transition: all .3s ease-in-out;
 }
 
 .sidebar-item:hover{
-  color: #2b74da;
+  /* color: #2b74da; */
     background: #e3e9f2;
     transition: all .3s ease-in-out;
 }
@@ -74,11 +74,13 @@
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   font-size: 13px;
+  height: 0;
   overflow: hidden;
 }
 .sidebar-item.open{
   color: #2b74da;
   background: #e3e9f2;
+  transition: all .3s ease-in-out;
 }
 .sidebar-item.open .sidebar-content{
   height: auto;

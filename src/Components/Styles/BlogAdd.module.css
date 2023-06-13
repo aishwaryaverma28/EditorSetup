@@ -3,26 +3,41 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem;
 }
 .addBlogMainForm{
-    width: 60%;
+    width: 63%;
 }
 .addBlogRightForm{
-    width: 35%;
-}
+   width: 35%;
+   
+  }
 .fromFiled{
     padding-bottom: 30px;
 }
 .fromFiled input{
   width: 100%;
   border: 1px solid #dcdcdc;
-  height: 60px;
-  border-radius: 10px;
+   border-radius: 10px;
   font-size: 16px;
-  font-family: "Work Sans", sans-serif;
-  padding: 1.2rem;
+  font-family: "Work Sans";
+  padding: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.fromUrl{
+display: flex;
+justify-content: space-between;
+gap: 1rem;
+}
+.fromUrl input{
+  width: 70%;
+  border: 1px solid #dcdcdc;
+   border-radius: 10px;
+  font-size: 16px;
+  font-family: "Work Sans";
+  padding: 0.8rem;
+  height: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .imageUploaderData{
     display: flex;
@@ -33,11 +48,11 @@
     background-color: #2b74da;
     color: #fff;
     cursor: pointer;
-    padding: 20px;
-    font-size: 17px;
+    padding: 14px 18px;
+    font-size: 15px;
     border-radius: 10px;
     border: none;
-    width: 20rem;
+    /* width: 20rem; */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     transition: 0.2s linear all;
   }
@@ -47,35 +62,42 @@
     font-weight: 500;
 }
 .imageUploaderContainer{
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 .fromBlogSection input{
   width: 100%;
   border: 1px solid #dcdcdc;
-  height: 60px;
+  /* height: 60px; */
   border-radius: 10px;
   font-size: 16px;
-  font-family: "Work Sans", sans-serif;
-  padding: 1.2rem;
+  font-family: "Work Sans";
+  padding: 1rem;
   margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .addSectionBtn{
     color: #2b74da;
     background-color: #fff;
     cursor: pointer;
-    padding: 20px;
+     width: 10rem;
     font-size: 17px;
+    font-weight: 600;
     border-radius: 10px;
+    height: 3rem;
     border: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);   
+    }
+.formBtnBox{
+   display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
-
 
 
 
 .tags {
     background: #f8fafb;
-    margin: 60px 30px 0 0;
+    margin-bottom: 1rem;
     border-radius: 10px;
     -webkit-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.02);
     -moz-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.02);
@@ -86,14 +108,14 @@
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     color: #1e2224;
-    padding: 17px;
+    padding: 14px;
     border-bottom: 1px solid #dcdcdc;
   }
   
   .contentBox {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
   }
   
   .tagSelectBox {
@@ -104,35 +126,44 @@
   
   .contentBox select {
     width: 100%;
-    height: 60px;
-    padding: 10px;
-    margin-bottom: 30px;
+    /* height: 40px; */
+    /* margin-bottom: 30px; */
     border: 1px solid #dcdcdc;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Work Sans";
   }
   
   .contentBox select option {
-    font-size: 17px;
-    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-family: "Work Sans";
   }
   
   .contentBox .fromFiled {
     width: 100%;
   }
+  .contentBox input{
+    width: 100%;
+  border: 1px solid #dcdcdc;
+   border-radius: 10px;
+  font-size: 16px;
+  font-family: "Work Sans";
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+  }
   
-  .primaryBtn {
-    padding: 20px;
+ .primaryBtn{
+  cursor: pointer;
+    padding: 10px;
     font-size: 17px;
     font-family: "Work Sans", sans-serif;
     border-radius: 10px;
     border: 1px solid #2b74da;
-    background: transparent;
+    background: #ffffff;
     color: #2b74da;
-    font-weight: 500;
-    cursor: pointer;
-  }
+    font-weight: 500
+ }
+  
   
   .primaryBtn:hover {
     color: #ffffff;
@@ -142,7 +173,7 @@
   
   .secondaryBtn {
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     font-size: 17px;
     font-family: "Work Sans", sans-serif;
     border-radius: 10px;
@@ -159,10 +190,8 @@
     transition: all 800ms ease-in-out;
   }
   .formEditor{
-    /* border: 2px solid red; */
-    padding: 2rem;
-    height: 30rem;
+    padding: 0 1rem;
   }
   .quillEditor{
-    height: 20rem;
+    height: 9.3rem;
 }

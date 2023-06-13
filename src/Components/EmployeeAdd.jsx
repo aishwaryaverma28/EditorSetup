@@ -2,7 +2,7 @@ import React from "react";
 import "./Styles/Editor.css";
 import styles from "./Styles/EmployeeUpdate.module.css";
 const EmployeeAdd = () => {
-  function submitForm (event) {
+  function submitForm(event) {
     event.preventDefault();
   }
   return (
@@ -11,78 +11,70 @@ const EmployeeAdd = () => {
         <h2>Add a new Employee</h2>
       </header>
       <form className={styles.addEmployeeFrom}>
-         <div className={styles.formDiv}>
+        <div className={styles.formDiv}>
           <div className={styles.leftForm}>
             <div className={styles.fromFiled}>
               <label for="">
                 employee code<span>*</span>
               </label>
-              <br />
-              <br />
               <input
                 type="text"
                 name="employeecode"
                 id="employeecode"
-                placeholder=""
+                placeholder="Please Enter Code"
               />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 employee name<span>*</span>
               </label>
-              <br />
-              <br />
+
               <input
                 type="text"
                 name="employeename"
                 id="employeename"
-                placeholder=""
+                placeholder="Please Enter Name"
               />
             </div>
             <div className={styles.fromFiled} top-align>
               <label for="">
                 current address<span>*</span>
               </label>
-              <br />
-              <br />
+
               <textarea
                 type="textarea"
                 id="currentaddress"
                 rows="5"
-                cols="30"
-                placeholder=""
+                cols="5"
+                placeholder="Please Enter Address"
               ></textarea>
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 date of joining<span>*</span>
               </label>
-              <br />
-              <br />
+
               <input type="date" name="date" id="date" placeholder="" />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 client/franchisee<span>*</span>
               </label>
-              <br />
-              <br />
-              <input type="text" name="client" id="client" placeholder="" />
+
+              <input type="text" name="client" id="client" placeholder="Please Enter Cilent" />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 remarks<span>*</span>
               </label>
-              <br />
-              <br />
-              <input type="text" name="remarks" id="remarks" placeholder="" />
+
+              <input type="text" name="remarks" id="remarks" placeholder="Please Enter Remarks" />
             </div>
             <div className={styles.fromFiled}>
               <label for="">registration date</label>
-              <br />
-              <br />
+
               <input
-                type="text"
+                type="date"
                 name="registration"
                 id="registration"
                 placeholder=""
@@ -94,78 +86,77 @@ const EmployeeAdd = () => {
               <label for="">
                 employee type<span>*</span>
               </label>
-              <br />
-              <br />
+
               <input
                 type="text"
                 name="employeetype"
                 id="employeetype"
-                placeholder=""
+                placeholder="Please Enter Employee Type"
               />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 phone number<span>*</span>
               </label>
-              <br />
-              <br />
+
               <input
                 type="tel"
                 name="phonenumber"
                 id="phonenumber"
                 maxlength="10"
-                placeholder=""
+                placeholder="Please Enter Phone Number"
               />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 permanent address<span>*</span>
               </label>
-              <br />
-              <br />
+
               <textarea
                 type="textarea"
                 id="permanentaddress"
                 rows="5"
-                cols="30"
-                placeholder=""
+                cols="5"
+                placeholder="Please Enter Permanent Address"
               ></textarea>
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 password<span>*</span>
               </label>
-              <br />
-              <br />
+
               <input
                 type="password"
                 name="password"
                 id="password"
-                placeholder=""
+                placeholder="Please Enter Password"
               />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 org name<span>*</span>
               </label>
-              <br />
-              <br />
-              <input type="text" name="orgname" id="orgname" placeholder="" />
+
+              <input type="text" name="orgname" id="orgname" placeholder="Please Enter Organisation Name" />
             </div>
             <div className={styles.fromFiled}>
               <label for="">
                 OTP<span>*</span>
               </label>
-              <br />
-              <br />
-              <input type="text" name="otp" id="otp" placeholder="" />
+
+              <input type="text" name="otp" id="otp" placeholder="Please Enter the OTP" />
+            </div>
+            <div className={styles.saveBtnRight}>
+              <button
+                type="button"
+                className={`${styles.secondaryBtn} ${styles.saveBtn}`}
+                onClick={submitForm}
+              >
+                Add Employee
+              </button>
             </div>
           </div>
-          </div>
-          <div className={styles.saveBtnRight}>
-          <button type="button" className={`${styles.secondaryBtn} ${styles.saveBtn}`} onClick={submitForm}>Save</button>
-          </div>
-        
+        </div>
       </form>
     </>
   );

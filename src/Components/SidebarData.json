@@ -1,10 +1,5 @@
 [
-    {
-        "title": "Menu",
-        "path": "/"
-    
-    },
-    {
+       {
         "title": "Blog",
         "subNav": [
             {
