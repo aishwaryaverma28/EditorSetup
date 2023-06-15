@@ -1,11 +1,16 @@
 import React, { useState, useRef } from 'react';
-import styles from './Styles/BlogAdd.module.css'
+import styles from './Styles/BlogAdd.module.css';
 
-const ImageUploader = ({ buttonTitle }) => {
+const ImageUploader = ({ buttonTitle, onDataTransfer }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [uploadStatus, setUploadStatus] = useState(buttonTitle);
   const [fileName, setFileName] = useState('');
   const [error, setError] = useState('');
+
+  const handleChange = (event) => {
+    const data = event.target.value;
+    onDataTransfer(data); // Call the callback function in the parent
+  };
 
   const allowedFileTypes = ['image/jpeg', 'image/png'];
   const fileInputRef = useRef(null);
@@ -27,6 +32,7 @@ const ImageUploader = ({ buttonTitle }) => {
       setTimeout(() => {
         setUploadStatus('Successful');
         setFileName(file.name);
+        onDataTransfer(file.name); // Call the callback function in the parent with the file name
       }, 2000);
     } else {
       setSelectedImage(null);
@@ -44,13 +50,15 @@ const ImageUploader = ({ buttonTitle }) => {
         onChange={handleImageUpload}
       />
       <div className={styles.imageUploaderData}>
-      <button onClick={handleButtonClick}>{uploadStatus} <i class="fa-sharp fa-solid fa-plus"></i></button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {fileName && (
-        <div>
-          <p>Uploaded File : {fileName}</p>
-        </div>
-      )}
+        <button onClick={handleButtonClick}>
+          {uploadStatus} <i className="fa-sharp fa-solid fa-plus"></i>
+        </button>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {fileName && (
+          <div>
+            <p>Uploaded File: {fileName}</p>
+          </div>
+        )}
       </div>
     </div>
   );
