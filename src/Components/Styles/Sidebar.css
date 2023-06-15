@@ -74,9 +74,11 @@
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   font-size: 13px;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
 }
+
 .sidebar-item.open{
   color: #2b74da;
   background: #e3e9f2;
@@ -84,6 +86,8 @@
 }
 .sidebar-item.open .sidebar-content{
   height: auto;
+  max-height: 999px;
   color: #2b74da;
   background: #e3e9f2;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
 }

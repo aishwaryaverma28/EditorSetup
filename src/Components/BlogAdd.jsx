@@ -1,11 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Styles/BlogAdd.module.css";
 import "./Styles/Editor.css";
 import ImageUploader from "./ImageUploader";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 import ReactEditor from "./ReactEditor";
 
 const BlogAdd = () => {
-  function AddSection(event) {
+  const [dataFromChild, setDataFromChild] = useState("");
+  const [formData, setFormData] = useState({
+    blogTitle: "",
+    url: "",
+    description: "",
+    field1: "",
+    sectionTitle: [],
+    tags: [],
+    date: "",
+  });
+
+  const handleDataTransfer = (data) => {
+    setDataFromChild(data);
+  };
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData((prev) => {
+      return { ...prev, [name]: value };
+    });
+  }
+  function AddSection() {
+    setFormData((prev) => ({
+      ...prev,
+      sectionTitle: [...prev.sectionTitle, prev.field1],
+      field1: "",
+    }));
+  }
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const updatedFormData = { ...formData, editorValue: dataFromChild };
+    console.log(updatedFormData);
+  }
+
+  function AddTag(event) {
     event.preventDefault();
   }
 
@@ -14,20 +49,27 @@ const BlogAdd = () => {
       <header className="headerEditor">
         <h2> Add a new Blog</h2>
       </header>
-      <form className={styles.scrollCover}>
+      <form className={styles.scrollCover} onSubmit={handleFormSubmit}>
         <div className={styles.addBlogContainer}>
           {/*==============================================================right side of form starts here ============================================================*/}
           <div className={styles.addBlogMainForm}>
             <div className={styles.fromFiled}>
               <input
                 type="text"
-                name="blogtitle"
+                name="blogTitle"
                 id="blogtitle"
                 placeholder="Blog Title"
+                onChange={handleChange}
               />
             </div>
             <div className={styles.fromUrl}>
-              <input type="text" name="url" id="url" placeholder="Url" />
+              <input
+                type="text"
+                name="url"
+                id="url"
+                placeholder="Url"
+                onChange={handleChange}
+              />
               <ImageUploader buttonTitle="Add Image" />
             </div>
             <div className={styles.fromFiled}>
@@ -36,15 +78,17 @@ const BlogAdd = () => {
                 name="description"
                 id="description"
                 placeholder="Description"
+                onChange={handleChange}
               />
             </div>
 
             <div className={styles.fromBlogSection}>
               <input
                 type="text"
-                name="sectiontitle"
+                name="field1"
                 id="sectiontitle"
                 placeholder="Section Title"
+                onChange={handleChange}
               />
               <div className={styles.formBtnBox}>
                 <ImageUploader buttonTitle="Add Blog Section Image" />
@@ -52,6 +96,11 @@ const BlogAdd = () => {
                   Add Section
                 </button>
               </div>
+              <ul>
+                {formData.sectionTitle.map((value, index) => (
+                  <li key={index}>{value}</li>
+                ))}
+              </ul>
             </div>
           </div>
           {/*==============================================================right side of form end here ============================================================*/}
@@ -69,7 +118,7 @@ const BlogAdd = () => {
                     <option value="5">please select tags 5</option>
                   </select>
                   <button
-                    onClick={AddSection}
+                    onClick={AddTag}
                     type="button"
                     className={styles.primaryBtn}
                   >
@@ -87,14 +136,13 @@ const BlogAdd = () => {
                     name="date"
                     id="date"
                     placeholder="please publish date"
+                    onChange={handleChange}
                   />
-                  <button
-                    type="button"
-                    onClick={AddSection}
+                  <input
+                    type="submit"
+                    value="Publish"
                     className={styles.secondaryBtn}
-                  >
-                    Publish
-                  </button>
+                  />
                 </div>
               </div>
             </div>
@@ -102,7 +150,7 @@ const BlogAdd = () => {
           {/*==============================================================left side of form ends here ============================================================*/}
         </div>
         <div className={styles.formEditor}>
-          <ReactEditor />
+          <ReactEditor onDataTransfer={handleDataTransfer} />
         </div>
       </form>
     </>

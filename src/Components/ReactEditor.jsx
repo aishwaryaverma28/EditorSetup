@@ -3,8 +3,14 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import styles from "./Styles/BlogAdd.module.css";
 
-function ReactEditor() {
+function ReactEditor({ onDataTransfer }) {
   const [value, setValue] = useState('');
+  
+  const handleQuillChange = (value) => {
+    setValue(value);
+    onDataTransfer(value); 
+    // console.log("react edit",value);
+  };
 
   const modules = {
     toolbar: [
@@ -25,7 +31,7 @@ function ReactEditor() {
     ],
   };
 
-  return <ReactQuill theme="snow" value={value} onChange={setValue} modules={modules} className={styles.quillEditor}/>;
+  return <ReactQuill theme="snow" value={value} onChange={handleQuillChange} modules={modules} className={styles.quillEditor}/>;
 }
 
 export default ReactEditor;
