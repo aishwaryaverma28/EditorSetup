@@ -8,7 +8,7 @@ import trash from "../Assets/image/delete-icon.svg";
 const BlogAdd = () => {
   const [sectionData, setSectionData] = useState([]);
   const [sectionTitle, setSectionTitle] = useState("");
-  const [sectionSort, setSectionSort] = useState("");
+  const [sectionSort, setSectionSort] = useState(null);
   const [uploadedSecImage, setUploadedSecImage] = useState(null);
   const [dataFromChild, setDataFromChild] = useState("");
   const [selectedTags, setSelectedTags] = useState("");
@@ -147,9 +147,9 @@ const handleTitle = (event) => {
 };
 
 const handleSecSortChange = (event) => {
-  const sort = event.target.value;
+  const sort = parseInt(event.target.value);
   setSectionSort(sort);
-};
+  };
 //=======================================================================================editor data transfer
 const handleDataTransfer = (data) => {
   setDataFromChild(data);
@@ -165,7 +165,7 @@ const handleAddSection = () => {
   setSectionData([...sectionData, newSection]);
   // Reset input fields and image state
   setSectionTitle("");
-  setSectionSort("");
+  setSectionSort(0);
   setUploadedSecImage(null);
   setDataFromChild("");
 };
@@ -188,7 +188,7 @@ console.log(sectionData);
         date: selectedDate,
         sections: sectionData,
         };
-        console.log(updatedFormData);      
+        // console.log(updatedFormData);      
     }
 
   function AddTag(event) {
