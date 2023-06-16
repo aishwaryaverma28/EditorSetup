@@ -1,7 +1,6 @@
 import React, { useState,useRef } from "react";
 import styles from "./Styles/BlogAdd.module.css";
 import "./Styles/Editor.css";
-import BlogSection from "./BlogSection";
 import ReactEditor from "./ReactEditor";
 import trash from "../Assets/image/delete-icon.svg";
 
@@ -19,7 +18,7 @@ const BlogAdd = () => {
   const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
-    blogTitle: "",
+    title: "",
     url: "",
     description: "",
   });
@@ -113,7 +112,7 @@ const handleSecImageChange = (event, index) => {
 
 const handleEditorChange = (data, index) => {
   const newSectionData = [...sectionData];
-  newSectionData[index].editor = data;
+  newSectionData[index].section = data;
   setSectionData(newSectionData);
 };
 
@@ -158,10 +157,10 @@ const handleDataTransfer = (data) => {
 //====================================================================================== handle section data in an array of objects
 const handleAddSection = () => {
   const newSection = {
-    title: sectionTitle,
+   heading : sectionTitle,
     sort: sectionSort,
     image: uploadedSecImage,
-    editor: dataFromChild,
+    section: dataFromChild,
   };
   setSectionData([...sectionData, newSection]);
   // Reset input fields and image state
@@ -187,7 +186,7 @@ console.log(sectionData);
         tag: selectedTags,
         image: imageName,
         date: selectedDate,
-        section: sectionData,
+        sections: sectionData,
         };
         console.log(updatedFormData);      
     }
@@ -210,8 +209,8 @@ console.log(sectionData);
             <div className={styles.fromFiled}>
               <input
                 type="text"
-                name="blogTitle"
-                id="blogtitle"
+                name="title"
+                id="title"
                 placeholder="Blog Title"
                 onChange={handleChange}
               />
@@ -325,17 +324,17 @@ console.log(sectionData);
       {sectionData.map((section, index) => (
         <div key={index} className={styles.section}>
           <div className={styles.sectionDropdown}>
-            <h3>{section.title}</h3>
+            <h3>{section.heading}</h3>
             <i className="fa-sharp fa-solid fa-plus"></i>
           </div>
 
           <input
             type="text"
-            name="sectionTitle"
-            id="sectiontitle"
+            name="heading"
+            id="heading"
             placeholder="Section Title"
             className={styles.sectionHead}
-            value={section.title}
+            value={section.heading}
             onChange={(event) => handleSecTitleChange(event, index)}
           />
           <div className={styles.sectionBlockOne}>
@@ -377,7 +376,7 @@ console.log(sectionData);
           <div className={styles.formEditor}>
             <ReactEditor
               onDataTransfer={(data) => handleEditorChange(data, index)}
-              initialContent={section.editor}
+              initialContent={section.section}
             />
           </div>
           <div className={styles.deleteContainer}>
