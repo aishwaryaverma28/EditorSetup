@@ -1,4 +1,5 @@
 import React, { useState,useRef } from "react";
+import axios from 'axios';
 import styles from "./Styles/BlogAdd.module.css";
 import "./Styles/Editor.css";
 import ReactEditor from "./ReactEditor";
@@ -16,6 +17,18 @@ const BlogAdd = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [imageName, setImageName] = useState("");
   const fileInputRef = useRef(null);
+
+  const [isIndex, setIsIndex] = useState(0);
+
+  function accordianClick(index) {
+      if (index === isIndex) {
+          setIsIndex(0);
+      } else {
+          setIsIndex(index);
+      }
+
+  }
+
 
   const [formData, setFormData] = useState({
     title: "",
@@ -41,7 +54,8 @@ const BlogAdd = () => {
     setSelectedTags(selectedTags ? `${selectedTags},${tagId}` : tagId);
   };
 
-  const handleTagRemoval = (tagIdToRemove) => {
+  const handleTagRemoval = (tagIdToRemove,e) => {
+    e.preventDefault();
     const updatedTags = selectedTags
       .split(",")
       .filter((tagId) => tagId !== tagIdToRemove)
@@ -57,8 +71,9 @@ const BlogAdd = () => {
     return selectedOption ? selectedOption.value : "";
   };
   //==================================================================== get image name from child component
-  const handleImageUpload = () => {
+  const handleImageUpload = (e) => {
     fileInputRef.current.click();
+    e.preventDefault();
   };
 
   const handleFileInputChange = (event) => {
@@ -71,8 +86,9 @@ const BlogAdd = () => {
     reader.readAsDataURL(file);
   };
 
-  const handleEditImage = () => {
+  const handleEditImage = (e) => {
     setUploadedImage(null);
+    e.preventDefault();
   };
   //===================================================================== function to add date in the form data
   const handleDateChange = (event) => {
@@ -116,7 +132,8 @@ const handleEditorChange = (data, index) => {
   setSectionData(newSectionData);
 };
 
-const handleSecImageUpload = () => {
+const handleSecImageUpload = (e) => {
+  e.preventDefault();
   const fileInput = document.createElement("input");
   fileInput.type = "file";
   fileInput.accept = "image/*";
@@ -135,7 +152,8 @@ const handleSecFileInputChange = (event) => {
   }
 };
 
-const handleSecEditImage = (index) => {
+const handleSecEditImage = (index,e) => {
+  e.preventDefault();
   const newSectionData = [...sectionData];
   newSectionData[index].image = null;
   setSectionData(newSectionData);
@@ -155,7 +173,8 @@ const handleDataTransfer = (data) => {
   setDataFromChild(data);
 };
 //====================================================================================== handle section data in an array of objects
-const handleAddSection = () => {
+const handleAddSection = (e) => {
+  e.preventDefault();
   const newSection = {
    heading : sectionTitle,
     sort: sectionSort,
@@ -170,7 +189,8 @@ const handleAddSection = () => {
   setDataFromChild("");
 };
 // =====================================================================================delete the targeted section
-const handleDeleteSection = (index) => {
+const handleDeleteSection = (index,e) => {
+  e.preventDefault();
   const newSectionData = [...sectionData];
   newSectionData.splice(index, 1);
   setSectionData(newSectionData);
@@ -189,6 +209,10 @@ console.log(sectionData);
         sections: sectionData,
         };
         // console.log(updatedFormData);      
+        axios.post("http://core.leadplaner.com:3000/api/admin/blog/add", updatedFormData)
+        .then((response) => {
+          console.log(response);
+        })
     }
 
   function AddTag(event) {
@@ -323,11 +347,12 @@ console.log(sectionData);
 
       {sectionData.map((section, index) => (
         <div key={index} className={styles.section}>
-          <div className={styles.sectionDropdown}>
+          <div className={styles.sectionDropdown} onClick={() => accordianClick(section.sort)}>
             <h3>{section.heading}</h3>
-            <i className="fa-sharp fa-solid fa-plus"></i>
+            {(isIndex === section.sort) ? <span><i class="fa-sharp fa-solid fa-minus"></i></span> : <span><i className="fa-sharp fa-solid fa-plus"></i></span>}
+            
           </div>
-
+<div  className={(isIndex === section.sort) ? `${styles.answer} ${styles.display_answer}` : `${styles.answer}`}>
           <input
             type="text"
             name="heading"
@@ -387,6 +412,7 @@ console.log(sectionData);
               <img src={trash} className={styles.deleteIcon} alt="Delete" />
             </button>
           </div>
+        </div>
         </div>
       ))}
     </>
