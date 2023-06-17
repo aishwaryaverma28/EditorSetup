@@ -1,10 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Styles/Editor.css";
 import styles from "./Styles/EmployeeUpdate.module.css";
 const EmployeeAdd = () => {
+
+const [name,setName] = useState("");
+const [fname,setfName] = useState("");
+const [lname,setlName] = useState("");
+const [details, setDetails] = useState({
+  name:"",
+  hire_date:"",
+  emp_no: "",
+  position:"",
+  address1:"",
+  address2:"",
+  
+
+})
   function submitForm(event) {
     event.preventDefault();
   }
+
+  function handleNameChange(event) {
+    const empName = event.target.value;
+    setName(empName);
+        let arr = empName.split(" ");
+    if (arr.length > 1)
+    splitEmployeeNme(arr);   
+  }
+  function splitEmployeeNme(arr){
+    setfName(arr[0]);
+    setlName(arr[arr.length-1]);
+  }
+  // console.log(lname);
   return (
     <>
       <header className="headerEditor">
@@ -34,6 +61,7 @@ const EmployeeAdd = () => {
                 name="employeename"
                 id="employeename"
                 placeholder="Please Enter Name"
+                onChange={handleNameChange}
               />
             </div>
             <div className={styles.fromFiled} top-align>
