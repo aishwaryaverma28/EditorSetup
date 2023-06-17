@@ -13,8 +13,6 @@ const [details, setDetails] = useState({
   position:"",
   address1:"",
   address2:"",
-  
-
 })
   function submitForm(event) {
     event.preventDefault();
